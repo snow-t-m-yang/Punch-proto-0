@@ -1,13 +1,17 @@
 import { StyleSheet, Image } from "react-native";
 
-const ImageViewer = ({ placeholderImageSource }) => {
+const ImageViewer = ({ placeholderImageSource, selectedImage }) => {
+  const imageSource =
+    selectedImage !== null ? { uri: selectedImage } : placeholderImageSource;
+
   return (
     <Image
-      source={placeholderImageSource}
-      styles={styles.Image}
+      source={imageSource}
+      style={styles.Image}
     />
   );
 };
+
 const styles = StyleSheet.create({
   Image: {
     width: 320,

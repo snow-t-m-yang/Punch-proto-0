@@ -1,7 +1,7 @@
 import { Modal, View, Text, Pressable, StyleSheet } from "react-native";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
 
-const EmojiPicker = ({ isVisible, children, onClose }) => {
+export default function EmojiPicker({ isVisible, children, onClose }) {
   return (
     <Modal
       animationType="slide"
@@ -23,7 +23,7 @@ const EmojiPicker = ({ isVisible, children, onClose }) => {
       </View>
     </Modal>
   );
-};
+}
 
 const styles = StyleSheet.create({
   modalContent: {
@@ -57,5 +57,3 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
   },
 });
-
-export default EmojiPicker;

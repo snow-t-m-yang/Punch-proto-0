@@ -149,7 +149,10 @@ export default function App() {
           onCloseModal={onModalClose}
         />
       </EmojiPicker>
-      <StatusBar style="auto" />
+      <StatusBar
+        style="light"
+        hidden="false"
+      />
     </GestureHandlerRootView>
   );
 }
